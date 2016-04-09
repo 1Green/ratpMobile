@@ -35,12 +35,12 @@ function sendResponse() {
 		checkScrollW();
 
 	
-	},1500);
+	},1000);
 	
 	setTimeout(function() {
 	
 		allWaiting[q-1].className = "waiting";
-		$(allAnswers[q-1]).fadeTo(1000, 1);
+		$(allAnswers[q-1]).fadeTo(500, 1);
 		allAnswers[q-1].className = " question displayAnswer";
 		checkScrollA();
 	
@@ -62,7 +62,7 @@ function checkScrollW() {
 
 function sendInput() {
 	allQuestions[q].textContent = textInput.value;
-	$(allQuestions[q]).fadeTo(1000, 1);
+	$(allQuestions[q]).fadeTo(500, 1);
 	allQuestions[q].className = " question displayQuestion";
 	textInput.value = "";
 	sendResponse();
