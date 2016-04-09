@@ -2,8 +2,40 @@ doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
-		link(href='stylesheets/screen.css' media='screen, projection' rel='stylesheet' type='text/css')
-		title 
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+		link(href='stylesheets/styles.css' media='screen, projection' rel='stylesheet' type='text/css')
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title RATP Hackaton
 	body
-		script(src='js/script.js')
-	
+		div.cont
+			div.navB
+				i.fa.fa-bars.fa-2x.fa-inverse#menu
+				i.fa.fa-times.fa-2x.fa-inverse#quit
+			div.main
+				div.test#mainDiv
+					div.question
+					div.waiting 
+						i.fa.fa-spinner.fa-2x.fa-inverse
+					div.answer Bah cherche gros débile, c'est pas bien dur tu verras !
+					div.question
+					div.waiting
+						i.fa.fa-spinner.fa-2x.fa-inverse
+					div.answer Non mais tu te fous de ma gueule ?
+					div.question
+					div.waiting
+						i.fa.fa-spinner.fa-2x.fa-inverse
+					div.answer Eh bah débrouilles toi si c'est comme ca.
+					div.question
+					div.waiting
+						i.fa.fa-spinner.fa-2x.fa-inverse
+					div.answer Je ne te répondrais plus.
+					div.question
+					div.waiting
+						i.fa.fa-spinner.fa-2x.fa-inverse
+					div.answer ...?
+
+				div.test2
+					input(type="text" id="textInput" placeholder="Ecrire à Transpagnon..")
+					input(type="button" id="send" value="Envoyer")
+		script(src='javascripts/jquery.js')
+		script(src='javascripts/script.js')

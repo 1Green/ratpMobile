@@ -1,0 +1,146 @@
+// Normalize
+@import "compass/reset";
+
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+// Compass Mixins
+@import "compass";
+
+body {
+	font-family: helvetica, sans-serif;
+}
+
+
+
+.cont {
+	
+	.navB {
+		height:40px;
+		// min-width:100vw;
+		@include display-flex;
+		@include justify-content(space-between);
+		@include align-items(center);
+		background: #222;
+		border-bottom:1px solid black;
+		i {
+			padding:10px;
+		}
+	}
+
+	.main {
+
+		.test {
+			height: 600px;
+			overflow-y:auto;
+			@include display-flex;
+			@include flex-flow(column nowrap);
+			@include justify-content(flex-start);
+			@include align-items(flex-start);
+			padding:35px 5%;
+			background: rgb(56,56,56); /* Old browsers */
+			background: -moz-radial-gradient(center, ellipse cover, rgba(56,56,56,1) 0%, rgba(16,16,16,1) 100%); /* FF3.6-15 */
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(56,56,56,1) 0%,rgba(16,16,16,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: radial-gradient(ellipse at center, rgba(56,56,56,1) 0%,rgba(16,16,16,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		}
+
+		.test2 {
+			background: rgb(56,56,56); /* Old browsers */
+			background: -moz-radial-gradient(center, ellipse cover, rgba(56,56,56,1) 0%, rgba(16,16,16,1) 100%); /* FF3.6-15 */
+			background: -webkit-radial-gradient(center, ellipse cover, rgba(56,56,56,1) 0%,rgba(16,16,16,1) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: radial-gradient(ellipse at center, rgba(56,56,56,1) 0%,rgba(16,16,16,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			background: #222;
+			border-top:1px solid black;
+			height:60px;
+			@include display-flex;
+			@include justify-content(space-around);
+			@include align-items(center);
+			padding:0 15px;
+			
+			input[type='text'] {
+				@include flex(0 1 500px);
+				padding:3px 15px;
+				background-color: #111;
+				border:1px solid #666;
+				transition:all 0.5s ease-in;
+				color:#CCC;
+				&:focus {
+					outline:0;
+					border:1px solid #CCC;
+					background-color: #000;
+				}
+			}
+
+			input[type='button'] {
+				@include flex(0 1 100px);
+				border:1px solid #666;
+				background-color: #111;
+				color:#CCC;
+				padding: 3px;
+				transition:all 0.5s ease-in;
+				margin-left:10px;
+				&:focus {
+					outline:0;
+					border:1px solid #CCC;
+					background-color: #000;
+				}
+			}
+		}
+	}
+}
+
+
+.answer {
+	display:none;
+	opacity:0;
+}
+
+.question {
+	@extend .answer;
+}
+
+.waiting {
+	@extend .answer;
+}
+
+.displayQuestion {
+	border:1px solid #171;
+	padding:15px 10px 10px 10px;
+	display:flex;
+	flex: 0 0 auto;
+	opacity:1;
+	justify-content:center;
+	align-items:center;
+	max-width:50%;
+	margin:15px 0;
+	box-shadow:0 0 15px 1px #111;
+	background:#222;
+	color:#3A3;
+	min-height:50px;
+}
+
+.displayAnswer {
+	@extend .displayQuestion;
+	align-self:flex-end;
+	border:1px solid #02E;
+	color: #25F;
+}
+
+.displayWait {
+	opacity:1;
+	display:flex;
+	align-self:flex-end;
+	margin:15px 0;
+	i {
+		
+	// animation: spin .7s infinite linear;
+	transform: translate(50px,100px);
+	-webkit-transform:rotateX(3600deg);
+	}
+}

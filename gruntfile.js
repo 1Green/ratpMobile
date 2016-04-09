@@ -5,7 +5,7 @@ module.exports = function(grunt){
 	
 	
 	jshint: {
-	    all: ['js/*.js']
+	    all: ['javascripts/*.js']
 	  },
 	  
 
@@ -17,7 +17,7 @@ module.exports = function(grunt){
 	        sourceMapName: 'path/to/sourcemap.map'
 	      },
 	      files: {
-	        'js/minJS.js': ['js/script.js','js/script2.js']
+	        'javascripts/minJS.js': ['javascripts/script.js']
 	      }
 	    }
 	  },
@@ -57,7 +57,7 @@ module.exports = function(grunt){
 
 	watch: {
 	  css: {
-	    files: ['index.jade','sass/*.scss','js/*.js','!js/minJS.js'],
+	    files: ['index.jade','sass/*.scss','javascripts/*.js','!js/minJS.js'],
 	    tasks: ['wip'],
 	    options: {
 	      spawn: false,

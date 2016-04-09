@@ -1,0 +1,8 @@
+javascripts/jquery.faloading.js
+javascripts/jquery.js
+javascripts/minJS.js
+javascripts/bootstrap-sprockets.js
+javascripts/bootstrap.js
+javascripts/bootstrap.min.js
+javascripts/bootstrap/*.js
+
