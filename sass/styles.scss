@@ -37,7 +37,7 @@ body {
 	.main {
 
 		.test {
-			height: 600px;
+			height: 535px;
 			overflow-y:auto;
 			@include display-flex;
 			@include flex-flow(column nowrap);
