@@ -1,6 +1,10 @@
 var mainDiv = document.getElementById("mainDiv");
 var textInput = document.getElementById("textInput");
 var send = document.getElementById("send");
+var menu = document.getElementById("menu");
+var scrollMenu = document.getElementById("scrollMenu");
+var exitMenu = document.getElementById("quit");
+var links = document.querySelectorAll(".menuCont");
 
 var allQuestions = $(".question");
 var allAnswers = $(".answer");
@@ -8,7 +12,11 @@ var allWaiting = $(".waiting");
 var q = 0;
 var a = 0;
 
-var responseTime = 3000;
+var responseTime = 1500;
+
+$(document).ready(function() {
+	textInput.focus();
+});
 
 $(document).keypress(function(e) {
 	if (e.which == 13) {
@@ -20,11 +28,48 @@ send.addEventListener("click", function() {
 	sendInput();
 });
 
+menu.addEventListener("click", function(){
+	scrollMenu.style.left = "0";
+});
+
+scrollMenu.addEventListener("click", function(){
+	setTimeout(function() {scrollMenu.style.left = "-100vw";},500);
+});
+
+exitMenu.addEventListener("click", function(){
+	setTimeout(function() {scrollMenu.style.left = "-100vw";},500);
+});
 
 
+links[0].addEventListener("click",function(){
+		setTimeout(function(){
+			location.href = 'index.html';	
+		},1300);
+});
 
+links[1].addEventListener("click",function(){
+		setTimeout(function(){
+			location.href = 'story2.html';	
+		},1300);
+});
 
+links[2].addEventListener("click",function(){
+		setTimeout(function(){
+			location.href = 'story3.html';	
+		},1300);
+});
 
+links[3].addEventListener("click",function(){
+		setTimeout(function(){
+			location.href = 'story4.html';	
+		},1300);
+});
+
+// links[4].addEventListener("click",function(){
+// 		setTimeout(function(){
+// 			location.href = 'story5.html';	
+// 		},1300);
+// });
 
 
 function sendResponse() {	
@@ -35,7 +80,7 @@ function sendResponse() {
 		checkScrollW();
 
 	
-	},1000);
+	},500);
 	
 	setTimeout(function() {
 	
@@ -69,6 +114,8 @@ function sendInput() {
 	checkScrollQ();
 	q++;
 }
+
+
 
 
 

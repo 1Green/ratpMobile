@@ -3,41 +3,57 @@ html(lang="en")
 	head
 		meta(charset="UTF-8")
 		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+		link(href='stylesheets/metrodna.css' media='screen, projection' rel='stylesheet' type='text/css')
 		link(href='stylesheets/styles.css' media='screen, projection' rel='stylesheet' type='text/css')
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title RATP Hackaton
+		mixin logo
+			img(src="img/RATP.png")
 	body
 		div.cont
 			div.navB
 				i.fa.fa-bars.fa-2x.fa-inverse#menu
 				i.fa.fa-times.fa-2x.fa-inverse#quit
+			div.scrollMenu#scrollMenu
+				img(src="img/loso.png")
+				div.menuCont
+					p Antony arrive à Paris
+				div.menuCont
+					p LOSO apprend
+				div.menuCont
+					p LOSO anticipe
+				div.menuCont
+					p Antony configure une alerte
 			div.main
 				div.test#mainDiv
-					div.firstAnswer Hello Antony! Comment puis-je t'aider?
+					div.firstAnswer Bonjour Antony! Comment puis-je t'aider?
 					div.question
 					div.waiting 
-						//- i.fa.fa-spinner.fa-2x.fa-inverse
-						img(src="img/RATP.png")
-					div.answer Pas de problème! Es-tu bien à Gare de Lyon ?
+						+logo
+					div.answer Pas de problème! Tu es bien à Gare de Lyon ?
 					div.question
 					div.waiting
-						img(src="img/RATP.png")
-					div.answer  Facile, il n'y a aucune correspondance. Prends la ligne 1 (jaune), direction Château de Vincennes, et descends à Saint Mandé. Tu y seras en environ 10 minutes. Besoin d'autre chose?
+						+logo
+					div.answer  Facile, il n'y a aucune correspondance. Prends la ligne 
+						span.metro.symbole
+						span.metro.ligne1 
+						| direction Château de Vincennes, et descends à Saint Mandé. Tu y seras en environ 10 minutes. Voici ton itinéraire.
+						img(src="img/mapSmall.png")
 					div.question
 					div.waiting
-						img(src="img/RATP.png")
-					div.answer Ok! Bon voyage et à bientôt!
+						+logo
+					div.answer A bientôt !
 					div.question
 					div.waiting
-						img(src="img/RATP.png")
-					div.answer Je ne te répondrais plus.
+						+logo
+					div.answer :)
 					div.question
 					div.waiting
-						img(src="img/RATP.png")
+						+logo
 					div.answer ...?
 
 				div.test2
-					input(type="text" id="textInput" placeholder="Ecrire à Transpagnon..")
+					input(type="text" id="textInput" placeholder="Ecrire à LOSO")
 					input(type="button" id="send" value="Envoyer")
 		script(src='javascripts/jquery.js')
 		script(src='javascripts/script.js')

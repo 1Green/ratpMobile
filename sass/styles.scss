@@ -16,7 +16,21 @@
 body {
 	font-family: helvetica, sans-serif;
 }
-
+a {
+	color:inherit;
+	&:active {
+		text-decoration: none;
+		color:inherit;
+	}
+	&:visited {
+		text-decoration: none;
+		color:inherit;
+	}
+	&:hover {
+		text-decoration: none;
+		color:inherit;
+	}
+}
 
 
 .cont {
@@ -34,6 +48,46 @@ body {
 		}
 	}
 
+	.scrollMenu {
+		position: absolute;
+		z-index:9999;
+		left:-100vw;
+		transition: all 0.5s ease-in-out;
+		@include display-flex;
+		@include flex-flow(column nowrap);
+		@include justify-content(flex-start);
+		@include align-items(center);
+		width:100vw;
+		height: 100vh;
+		background: rgba(255,255,255,0.9);
+		color:#333;
+		padding-top:40px;
+		img{
+			margin-bottom: 20px;
+		}
+	
+		i{
+			margin-bottom:30px;
+		}
+	
+		div{	
+			width:100%;
+			@include display-flex;
+			@include justify-content(center);
+			padding:20px 0;
+			
+			&:hover {
+				background: rgba(0,0,0,0.8);
+				color:#FFF;
+			}
+			&:not(:active) {
+				animation:blink 0.2s linear;
+			}
+			p {
+				font-size:2em;
+			}
+		}
+	}
 	.main {
 
 		.test {
@@ -107,6 +161,13 @@ body {
 .answer {
 	display:none;
 	opacity:0;
+	span {
+		position: relative;
+		top:5px;
+	}
+	img {
+		margin:5px 10px 5px 10px;
+	}
 }
 
 .question {
@@ -118,7 +179,7 @@ body {
 }
 
 .displayQuestion {
-	border:1px solid #171;
+	border:1px solid #C73;
 	padding:15px 10px 10px 10px;
 	display:flex;
 	flex: 0 0 auto;
@@ -129,20 +190,21 @@ body {
 	margin:15px 0;
 	box-shadow:0 0 15px 1px #111;
 	background:#222;
-	color:#3A3;
+	color:#D93;
 	min-height:50px;
+	align-self:flex-end;
 }
 
 .displayAnswer {
 	@extend .displayQuestion;
-	align-self:flex-end;
-	border:1px solid #02E;
-	color: #25F;
+	align-self:flex-start;
+	border:1px solid #175;
+	color:#6CA;
 }
 
 .displayWait {
 	opacity:1;
-	align-self:flex-end;
+	align-self:flex-start;
 	margin:15px 0;
 	animation:spin 4s linear infinite;
 	i {
@@ -154,6 +216,18 @@ body {
 @keyframes spin { 
 	100% { 
 		transform: rotateY(540deg);
+	}
+}
+
+@keyframes blink {
+	0% {
+		background: rgba(0,0,0,0.8);
+	}
+	50% {
+		background: rgba(255,255,255,0.8);
+	}
+	100% {
+		background: rgba(0,0,0,0.8);
 	}
 }
 
