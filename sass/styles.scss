@@ -39,7 +39,6 @@ a {
 	@include flex-flow(column nowrap);
 	.navB {
 		height: 7vh;
-		min-height:40px;
 		@include display-flex;
 		@include justify-content(space-between);
 		@include align-items(center);
@@ -112,16 +111,15 @@ a {
 			background: radial-gradient(ellipse at center, rgba(56,56,56,1) 0%,rgba(16,16,16,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			background: #222;
 			border-top:1px solid black;
-			height:9vh;
-			min-height:70px;
+			min-height:9vh;
 			@include display-flex;
 			@include justify-content(space-around);
 			@include align-items(center);
-			padding:0 15px 10px 15px;
+			padding:0 15px 0 15px;
 			
 			input[type='text'] {
 				min-height:60%;
-				@include flex(0 1 500px);
+				@include flex(0 1 600px);
 				padding:3px 15px;
 				background-color: #111;
 				border:1px solid #666;
@@ -168,7 +166,8 @@ a {
 		top:5px;
 	}
 	img {
-		margin:5px 10px 5px 10px;
+		margin:5px 10px;
+		width:90%;
 	}
 }
 
