@@ -8882,9 +8882,16 @@ a:hover {
   color: inherit;
 }
 
-/* line 39, ../sass/styles.scss */
+/* line 37, ../sass/styles.scss */
+.cont {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+}
+/* line 40, ../sass/styles.scss */
 .cont .navB {
-  min-height: 7vh;
+  height: 7vh;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
@@ -8913,7 +8920,7 @@ a:hover {
   -webkit-align-items: center;
   align-items: center;
   width: 100vw;
-  max-height: 93vh;
+  height: 93vh;
   background: white;
   color: #333;
   padding-top: 40px;
@@ -8948,7 +8955,7 @@ a:hover {
 .cont .scrollMenu div p {
   font-size: 2em;
 }
-/* line 94, ../sass/styles.scss */
+/* line 93, ../sass/styles.scss */
 .cont .main .test {
   height: 84vh;
   overflow-y: auto;
@@ -8970,7 +8977,7 @@ a:hover {
   background: radial-gradient(ellipse at center, #383838 0%, #101010 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-/* line 108, ../sass/styles.scss */
+/* line 107, ../sass/styles.scss */
 .cont .main .test2 {
   background: #383838;
   /* Old browsers */
@@ -8982,7 +8989,7 @@ a:hover {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: #222;
   border-top: 1px solid black;
-  min-height: 9vh;
+  min-height: 60px;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-around;
@@ -8993,7 +9000,7 @@ a:hover {
 }
 /* line 121, ../sass/styles.scss */
 .cont .main .test2 input[type='text'] {
-  height: 60%;
+  min-height: 60%;
   -webkit-flex: 0 1 500px;
   flex: 0 1 500px;
   padding: 3px 15px;
@@ -9010,7 +9017,7 @@ a:hover {
 }
 /* line 136, ../sass/styles.scss */
 .cont .main .test2 input[type='button'] {
-  height: 60%;
+  min-height: 60%;
   -webkit-flex: 0 1 100px;
   flex: 0 1 100px;
   border: 1px solid #666;
