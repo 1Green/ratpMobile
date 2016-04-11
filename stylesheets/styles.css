@@ -8884,7 +8884,7 @@ a:hover {
 
 /* line 39, ../sass/styles.scss */
 .cont .navB {
-  height: 7vh;
+  min-height: 7vh;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
@@ -8913,7 +8913,7 @@ a:hover {
   -webkit-align-items: center;
   align-items: center;
   width: 100vw;
-  height: 93vh;
+  max-height: 93vh;
   background: white;
   color: #333;
   padding-top: 40px;
@@ -8933,7 +8933,7 @@ a:hover {
   display: flex;
   -webkit-justify-content: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 /* line 80, ../sass/styles.scss */
 .cont .scrollMenu div:hover {
@@ -8982,7 +8982,7 @@ a:hover {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   background: #222;
   border-top: 1px solid black;
-  height: 9vh;
+  min-height: 9vh;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-around;

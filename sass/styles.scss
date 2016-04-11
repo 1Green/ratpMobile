@@ -37,7 +37,7 @@ a {
 .cont {
 	
 	.navB {
-		height:7vh;
+		min-height:7vh;
 		// min-width:100vw;
 		@include display-flex;
 		@include justify-content(space-between);
@@ -59,7 +59,7 @@ a {
 		@include justify-content(flex-start);
 		@include align-items(center);
 		width:100vw;
-		height: 93vh;
+		max-height: 93vh;
 		background: rgba(255,255,255,1);
 		color:#333;
 		padding-top:40px;
@@ -75,7 +75,7 @@ a {
 			width:100%;
 			@include display-flex;
 			@include justify-content(center);
-			padding:20px 0;
+			padding:10px 0;
 			
 			&:hover {
 				background: rgba(0,0,0,0.8);
@@ -112,7 +112,7 @@ a {
 			background: radial-gradient(ellipse at center, rgba(56,56,56,1) 0%,rgba(16,16,16,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 			background: #222;
 			border-top:1px solid black;
-			height:9vh;
+			min-height:9vh;
 			@include display-flex;
 			@include justify-content(space-around);
 			@include align-items(center);
